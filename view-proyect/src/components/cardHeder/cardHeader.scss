@@ -1,0 +1,57 @@
+@import '../App.scss';
+.content-cardh {
+
+  position: relative;
+  .principalcard {
+		position: absolute;
+		width: 40%;
+		top: 20px;
+    .card {
+      height: 308px;
+      border-radius: unset;
+      background-color: rgba(255, 255, 255, 0.3);
+			backdrop-filter: blur(10px);
+			margin-top: 50px;
+      .card-body {
+				small {
+					font-weight: 300;
+					color: $white;
+				}
+				h1 {
+					color: $white;
+					margin-bottom: 15px;
+				}
+				p {
+					font-weight: 300;
+					color: $white;
+					span {
+						font-weight: 400;
+					}
+					&:last-child {
+						margin-top: 28px;
+					}
+				}
+			}
+    }
+
+    .card-votes {
+      height: 40px;
+			top: 100%;
+      .card-like {
+        background-color: rgba(43, 255, 0, 0.3);
+        width: 65%;
+				display: inline-flex;
+				height: 100%;
+      }
+
+      .card-dislike {
+        background-color: rgba(255, 145, 0, 0.3);
+        width: 35%;
+				display: inline-flex;
+				height: 100%;
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,23 @@
+.content-nav {
+	background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(0, 0, 0));
+	.navbar {
+		color: #fff;
+		a {
+			cursor: pointer;
+		}
+		.content-list {
+			padding: 10px 0;
+			ul {
+				margin: 0;
+				a {
+					cursor: pointer;
+					li {
+						display: inline;
+						margin: 0 10px;
+					}
+				}
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,96 @@
+/* Made with love by Mutiullah Samim*/
+@import '../App.scss';
+.content-login {
+  background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Numans', sans-serif;
+
+  .container {
+    height: 100%;
+    align-content: center;
+
+    .card {
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 400px;
+      background-color: rgba(0, 0, 0, 0.5) !important;
+      .card-header {
+        h3 {
+          color: white;
+        }
+
+        .social_icon {
+          position: absolute;
+          right: 20px;
+          top: -45px;
+
+          span {
+            font-size: 60px;
+            margin-left: 10px;
+            color: #FFC312;
+
+            &:hover {
+              color: white;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .card-body {
+        .input-group-prepend {
+          span {
+            width: 50px;
+            background-color: #FFC312;
+            color: black;
+						border: 0 !important;
+						margin: 0 auto;
+						display: block;
+						&.input-group-text-status {
+							border-top-left-radius: .25rem;
+							border-bottom-left-radius: .25rem;
+						}
+					}
+        }
+
+        input {
+          &:focus {
+            outline: 0 0 0 0 !important;
+            box-shadow: 0 0 0 0 !important;
+					}
+					&.form-control-age {
+						border-top-right-radius: .25rem;
+						border-bottom-right-radius: .25rem;
+						margin-right: 5px;
+					}
+        }
+
+        .login_btn {
+          color: black;
+          background-color: #FFC312;
+          width: 100px;
+
+          &:hover {
+            color: black;
+            background-color: white;
+          }
+        }
+      }
+
+      .card-footer {
+        .links {
+          color: white;
+
+          a {
+						margin-left: 4px;
+						cursor: pointer;
+						color: $orange;
+						font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
