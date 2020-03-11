@@ -1,0 +1,52 @@
+@import '../../../App.scss';
+
+.content-card {
+  margin-top: 50px;
+
+  .gray-card {
+    background-color: $gray;
+    display: block;
+
+    .title,
+    .body {
+      display: inline-block;
+
+      p {
+        margin: unset;
+      }
+    }
+
+    .title {
+      width: 20%;
+      padding: 10px;
+
+      p {
+        font-size: 18px;
+        line-height: 30px;
+
+        span {
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .body {
+      width: 80%;
+      padding-right: 50px;
+      position: relative;
+
+      &:after {
+        content: 'x';
+        width: 10px;
+        height: 10px;
+        color: black;
+        position: absolute;
+        top: 0;
+        left: 95%;
+        transform: translate(-50%, 27%);
+        cursor: pointer;
+      }
+    }
+  }
+}

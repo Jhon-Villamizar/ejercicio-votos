@@ -1,0 +1,31 @@
+.content-footer {
+	display: block;
+	width: 100%;
+	margin-bottom: 60px;
+	.footerMenu,.footerSocial {
+		display: inline-block;
+		ul {
+			list-style-type: none;
+			margin: unset;
+			padding: unset;
+			li {
+				margin: 0 10px;
+				display: inline-block;
+			}
+			a {
+				cursor: pointer;
+				display: inline-block;
+				li {
+					margin: 0 10px;
+				}
+			}
+			
+		}
+	}
+	.footerMenu {
+		float: left;
+	}
+	.footerSocial {
+		float: right;
+	}
+}
