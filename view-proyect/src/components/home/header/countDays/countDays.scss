@@ -1,0 +1,54 @@
+@import '../../../App.scss';
+.content-count {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	.content-left, .content-right {
+		display: inline-block;
+		height: 40px;
+		p {
+			margin: unset;
+		}
+	}
+	.content-left {
+		width: 26%;
+		background-color: rgba(0, 0, 0, 0.6);
+		text-align: right;
+		padding: 13px 15px;
+		position: relative;
+		p {
+			color: $white;
+			font-size: 12px;
+			font-weight: 300;	
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			top: 30%;
+			left: 100%;
+			width: 0;
+			height: 0;
+			border-width: 8px;
+			border-style: solid;
+			border-color: transparent transparent transparent rgba(0, 0, 0, 0.85);
+			z-index: 1;
+		}
+	}
+	.content-right {
+		width: 74%;
+		background-color: rgba(255, 255, 255, 0.6);
+		padding: 0 15px;
+		position: absolute;
+
+		p {
+			font-size: 33px;
+			font-weight: 400;
+			position: absolute;
+			top: -6px;
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+}

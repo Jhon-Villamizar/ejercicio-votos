@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Signin from '../signin/Signin';
-import Signup from '../signup/Signup';
+import Signin from './signin/Signin';
+import Signup from './signup/Signup';
 import './login.scss';
 
 export default function Login() {

@@ -19,10 +19,10 @@ export default function CardHeader() {
 						</div>
 						<div class="card-votes">
 							<div class="card-like">
-									<p><i class="far fa-thumbs-up"></i></p>
+									<p><i class="fas fa-thumbs-up"></i></p>
 							</div>
 							<div class="card-dislike">
-									<p><i class="far fa-thumbs-up"></i></p>
+									<p><i class="fas fa-thumbs-up"></i></p>
 							</div>
 						</div>
 						</div>
