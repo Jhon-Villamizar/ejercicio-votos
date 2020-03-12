@@ -17,6 +17,7 @@
 				.status {
 					.like {
 						position: relative;
+						height: 96px;
 						&:before {
 							content: '';
 							width: 30px;
@@ -67,7 +68,7 @@
 					}
 					.buttonDislike {
 						background-color: $orange;
-						width: 30px;
+						min-width: 30px;
 						border: 2px solid $white;
 						i {   
 							vertical-align: middle;
@@ -88,7 +89,8 @@
 				.progresLike,.progresDislike {
 					display: inline-block;
 					height: 35px;
-					width: 50%;
+					min-width: 15%;
+					max-width: 85%;
 					p{
 						margin: 0;
 						display: inline-block;

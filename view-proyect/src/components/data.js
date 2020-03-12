@@ -1,34 +1,38 @@
-export const data = [
+exports.data = [
 	{ 
 		name: 'Kanye West',
-		like: 64, 
+		like: 0, 
 		text: 'Lorem ipsum', 
-		dislike: 36, 
-		totaVotes: 100,
-		type: 'Entertainment'
+		dislike: 200, 
+		totalVotes: 200,
+		type: 'Entertainment',
+		img: ''
 	},
 	{ 
 		name: 'Mark Zuckerberg',
 		like: 36, 
 		text: 'Lorem ipsum', 
 		dislike: 64, 
-		totaVotes: 100 ,
-		type: 'Bussines'
+		totalVotes: 100 ,
+		type: 'Bussines',
+		img: ''
 	},
 	{ 
 		name: 'Cristina Fernández de Kirchner',
 		like: 36, 
 		text: 'Lorem ipsum', 
 		dislike: 64, 
-		totaVotes: 100,
-		type: 'Politics'
+		totalVotes: 100,
+		type: 'Politics',
+		img: ''
 	},
 	{ 
 		name: 'Malala Yousafzai',
 		like: 64, 
 		text: 'Lorem ipsum', 
 		dislike: 36, 
-		totaVotes: 100,
-		type: 'Entertainment'
+		totalVotes: 100,
+		type: 'Entertainment',
+		img: ''
 	}
 ]

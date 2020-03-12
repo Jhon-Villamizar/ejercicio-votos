@@ -6,7 +6,6 @@ import Body from './body/Body';
 import Footer from './footer/Footer';
 
 export default function Home() {
-	console.log(data);
 
 	return (
 		<div>
