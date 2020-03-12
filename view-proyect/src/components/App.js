@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import './App.scss'
 import Login from './login/Login';
-import Home from './home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from './home/Nav';
+import Home from './home/Home';
 
 function App() {
   const [mainView, setMainView] = useState(true);

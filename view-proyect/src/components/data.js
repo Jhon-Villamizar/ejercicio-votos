@@ -1,10 +1,9 @@
 exports.data = [
 	{ 
 		name: 'Kanye West',
-		like: 0, 
+		like: 10, 
 		text: 'Lorem ipsum', 
-		dislike: 200, 
-		totalVotes: 200,
+		dislike: 4, 
 		type: 'Entertainment',
 		img: ''
 	},
@@ -13,7 +12,6 @@ exports.data = [
 		like: 36, 
 		text: 'Lorem ipsum', 
 		dislike: 64, 
-		totalVotes: 100 ,
 		type: 'Bussines',
 		img: ''
 	},
@@ -22,7 +20,6 @@ exports.data = [
 		like: 36, 
 		text: 'Lorem ipsum', 
 		dislike: 64, 
-		totalVotes: 100,
 		type: 'Politics',
 		img: ''
 	},
@@ -31,7 +28,6 @@ exports.data = [
 		like: 64, 
 		text: 'Lorem ipsum', 
 		dislike: 36, 
-		totalVotes: 100,
 		type: 'Entertainment',
 		img: ''
 	}

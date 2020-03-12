@@ -19,8 +19,8 @@ export default function Footer() {
 					<div className="footerSocial text-right">
 							<ul>
 								<li>Follow Us</li>
-								<a><li><i class="fab fa-facebook-square"></i></li></a>
-								<a><li><i class="fab fa-twitter"></i></li></a>
+								<a><li><i className="fab fa-facebook-square"></i></li></a>
+								<a><li><i className="fab fa-twitter"></i></li></a>
 							</ul>
 						</div>
 					</div>

@@ -1,9 +1,6 @@
 import React from 'react';
-import './home.scss';
-import { data } from '../data.js';
-import Header from './header/Header';
-import Body from './body/Body';
-import Footer from './footer/Footer';
+import './nav.scss';
+import Home from './Home';
 import {
 	BrowserRouter as Router,
   Switch,
@@ -11,8 +8,7 @@ import {
   Link
   } from "react-router-dom";
 
-export default function Home() {
-
+export default function Nav() {
 	return (
 		<Router>
 		<div className="content-nav">
@@ -47,7 +43,10 @@ export default function Home() {
 		
 		<Switch>
 		<Route path="/">
-		  	<Base/>
+		  	<Home/>
+          </Route>
+		<Route path="/Home">
+		  	<Home/>
           </Route>
           <Route path="/PastTrials">
 		  	<PastTrials/>
@@ -63,15 +62,8 @@ export default function Home() {
           </Route>
         </Switch>
 		</Router>
-
 	)
 }
-
-function Base() {
-	return <div><Header />
-	<Body />
-	<Footer /></div>;
-  }
 
 function PastTrials() {
 	return <h2>PastTrials</h2>;
