@@ -10,6 +10,7 @@
 			width: 100%;
 			position: relative;
 			color: $white;
+			margin-bottom: 30px;
 			.voteInfo {
 				position: absolute;
 				top: 38%;
@@ -61,23 +62,30 @@
 					.buttonLike {
 						background-color: $green;
 						width: 30px;
-						border: 2px solid $white;
+						border: 2px solid $green;
+
 						i {   
 							vertical-align: middle;
+						}
+						&-active {
+							border: 2px solid $white;
 						}
 					}
 					.buttonDislike {
 						background-color: $orange;
-						min-width: 30px;
-						border: 2px solid $white;
+						border: 2px solid $orange;
+						width: 30px;
 						i {   
 							vertical-align: middle;
 							transform: rotate(180deg);
 						}
+						&-active {
+							border: 2px solid $white;
+						}
 					}
 					.buttonVote {
 						width: 100px;
-						border: 1px solid $white;
+						border: 2px solid $white;
 					}
 				}
 			}

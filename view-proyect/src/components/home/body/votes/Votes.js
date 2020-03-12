@@ -3,21 +3,68 @@ import "./votes.scss";
 import data from "../../../data";
 
 export default function Votes() {
-	const [listPeople, setListPeople] = useState([]);  
-  var porclike
-  var porcdislike
-
+	const [like, setLike] = useState([]);  
+	const [dislike, setDislike] = useState([]);  
+  const likes = document.getElementsByClassName('buttonLike');
+  const dislikes = document.getElementsByClassName('buttonDislike');
+  var arraylikes =[];
+  var arraydislikes=[];
   useEffect(() => {
-    // console.log(typeof(data));
-    // console.log(data.data);
-	}, []);
+  }, []);
+  
+  const eraserDislike = () => {
+    for (let i = 0; i < dislikes.length; i++) {
+      const element = dislikes[i];
+      element.className ='buttonDislike'
+    }
+  }
+  const eraserLike = () => {
+    for (let i = 0; i < likes.length; i++) {
+      const element = likes[i];
+      element.className ='buttonLike'
+    }
+  }
+  
+
+  const handlerSend = () => {
+
+  }
 
   for (let i = 0; i < data.data.length; i++) {
     const element = data.data[i];
+    console.log(element);
+    arraylikes.push(element.like);
+    arraydislikes.push(element.dislike);
     element.porclike = Math.floor(element.like *100)/element.totalVotes;
     element.porcdislike = Math.floor(element.dislike *100)/element.totalVotes;
-    console.log( element);
   };
+
+  
+  
+  const handlerActive = (e) => {
+    eraserDislike();
+    eraserLike();
+    e.preventDefault();
+    if (e.target.className == 'fas fa-thumbs-up') {
+      if (e.target.parentNode.className == 'buttonLike') {
+        e.target.parentNode.className = 'buttonLike buttonLike-active';
+        console.log(like);
+        eraserDislike();
+      } else if (e.target.parentNode.className == 'buttonDislike') {
+        e.target.parentNode.className = 'buttonDislike buttonDislike-active';
+        console.log(dislike);
+        eraserLike();
+      }
+    } else if (e.target.className == 'buttonLike') {
+      e.target.className = 'buttonLike buttonLike-active';
+      console.log(like);
+      eraserDislike();
+    } else if (e.target.className == 'buttonDislike'){
+      e.target.className = 'buttonDislike buttonDislike-active';
+      console.log(dislike);
+      eraserLike();
+    }    
+  }
 
   var cards = data.data.map(element => 
     <div className="col-6">
@@ -31,13 +78,13 @@ export default function Votes() {
             Vestibulum diam ante, porttitor a odio aget, rhoncus neque. Aenean eu velit libero.
           </p>
           <div className="buttons">
-            <div className="buttonLike">
+            <div className="buttonLike" onClick={handlerActive}>
               <i class="fas fa-thumbs-up"></i>
             </div>
-            <div className="buttonDislike">
+            <div className="buttonDislike" onClick={handlerActive}>
               <i class="fas fa-thumbs-up"></i>
             </div>
-            <div className="buttonVote">
+            <div className="buttonVote" onClick={handlerSend}>
               <p>Vote now</p>
             </div>
           </div>
@@ -55,6 +102,7 @@ export default function Votes() {
       </div>
     </div>
   );
+
 
 
   return (
