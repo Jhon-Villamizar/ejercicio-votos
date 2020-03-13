@@ -1,81 +1,69 @@
-import React from 'react';
-import './nav.scss';
-import Home from './Home';
+import React from "react";
 import {
-	BrowserRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Link
-  } from "react-router-dom";
+} from "react-router-dom";
+import Home from './Home';
+import './nav.scss';
 
 export default function Nav() {
-	return (
-		<Router>
-		<div className="content-nav">
-			<div className="container">
-				<div className="row">
-					<div className="col-12">
-						<nav className="navbar">
-							<Link to="/" className="navbar-brand">Rule of Thumb.</Link>
-							<div className="content-list">
-								<ul>
-									<Link to="/PastTrials">
-										<li>
-											Past Trials
-										</li>
-									</Link>
-									<Link to="/HowItWorks">
-										<li>How It Works</li>
-									</Link>
-									<Link to="/LogIn">
-										<li>Log In / Sign Up</li>
-									</Link>
-									<Link to="/serach">
-										<li><i className="fas fa-search"></i></li>
-									</Link>
-								</ul>
-							</div>
-						</nav>
-					</div>
+  return (
+    <Router>
+      <div className="content-nav">
+	  	<div className="container">
+			<div className="row">
+				<div className="col-12">
+					<nav className="navbar">
+					<Link to="/" className="navbar-brand">Rule of Thumb.</Link>
+					<a className="movil"><i class="fas fa-bars"></i></a>
+					<ul className= 'items-menu' id="menu">
+						<li>
+							<Link to="/PastTrials">Past Trials</Link>
+						</li>
+						<li>
+							<Link to="/HowItWorks">How It Works</Link>
+						</li>
+						<li>
+							<Link to="/LogIn">Log In / Sign Up</Link>
+						</li>
+						<li>
+							<a><i className="fas fa-search"></i></a>
+						</li>
+					</ul>
+					</nav>
 				</div>
 			</div>
 		</div>
-		
-		<Switch>
-		<Route path="/">
-		  	<Home/>
-          </Route>
-		<Route path="/Home">
-		  	<Home/>
-          </Route>
+
+        <Switch>
           <Route path="/PastTrials">
-		  	<PastTrials/>
+            <PastTrials />
           </Route>
           <Route path="/HowItWorks">
-			<HowItWorks/>
+            <HowItWorks />
           </Route>
-          <Route path="/LogIn">
-		  	<LogIn/>
+		  <Route path="/LogIn">
+            <LogIn />
           </Route>
-          <Route path="/Serach">
-		  <Serach/>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
-		</Router>
-	)
+      </div>
+    </Router>
+  );
 }
 
+
 function PastTrials() {
-	return <h2>PastTrials</h2>;
-  }
-  
-  function HowItWorks() {
-	return <h2>HowItWorks</h2>;
-  }
-  
-  function LogIn() {
-	return <h2>LogIn</h2>;
-  }
-  function Serach() {
-	return <h2>Serach</h2>;
+  return <h2>Past Trials</h2>;
+}
+
+function HowItWorks() {
+  return <h2>How It Works</h2>;
+}
+function LogIn() {
+	return <h2>Log In / Sign Up</h2>;
   }

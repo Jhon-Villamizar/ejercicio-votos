@@ -12,7 +12,7 @@ export default function Info() {
                                 <p className="text-center">Speak out. Be heard.<br /> <span>Be counted</span></p>
                             </div>
                             <div className="body">
-                                <p className="text-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ratione dolorum tempora delectus labore praesentium quibusdam maiores, corporis necessitatibus et! Voluptas dolorem placeat reiciendis natus</p>
+                                <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ratione dolorum tempora delectus labore praesentium quibusdam maiores, corporis necessitatibus et! Voluptas dolorem placeat reiciendis natus</p>
                             </div>
                         </div>
                     </div>

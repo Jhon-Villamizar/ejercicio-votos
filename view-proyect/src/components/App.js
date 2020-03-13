@@ -9,7 +9,7 @@ function App() {
   const [mainView, setMainView] = useState(true);
   var view;
   if (mainView) {
-    view = <Home />
+    view = <Nav />
   } else {
     view = <Login />
   }

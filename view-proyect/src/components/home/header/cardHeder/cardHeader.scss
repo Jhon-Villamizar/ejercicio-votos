@@ -6,12 +6,24 @@
 		position: absolute;
 		width: 40%;
 		top: 20px;
+		@media (max-width: 768px) {
+			width: 50%;
+		}
+		@media (max-width: 425px) {
+			width: 93%;
+		}
     .card {
-      height: 308px;
-      border-radius: unset;
-      background-color: rgba(255, 255, 255, 0.3);
-			backdrop-filter: blur(10px);
-			margin-top: 50px;
+		height: 308px;
+		border-radius: unset;
+		background-color: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(10px);
+		margin-top: 90px;
+		@media (max-width: 1024px) {
+			height: 335px;
+		}
+		@media (max-width: 325px) {
+			height: 381px;
+		}
       .card-body {
 				small {
 					font-weight: 300;

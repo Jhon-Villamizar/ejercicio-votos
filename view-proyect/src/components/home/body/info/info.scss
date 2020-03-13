@@ -1,7 +1,6 @@
 @import '../../../App.scss';
 
 .content-card {
-  margin-top: 50px;
 
   .gray-card {
     background-color: $gray;
@@ -35,7 +34,9 @@
       width: 80%;
       padding-right: 50px;
       position: relative;
-
+      p {
+        text-align: left;
+      }
       &:after {
         content: 'x';
         width: 10px;
@@ -48,5 +49,44 @@
         cursor: pointer;
       }
     }
+    
+  }
+  @media (max-width: 768px) {
+    .gray-card {
+      padding: 10px;
+      .title{
+        width: 35%;
+        position: relative;
+        top: -28px;
+      }
+      .body{
+        width: 65%;
+        &:after {
+          top: 47PX;
+        }
+      }
+    }
+    
+  }
+  @media (max-width: 425px) {
+    .gray-card {
+      padding: 10px;
+      .title{
+        width: 100%;
+        position: relative;
+        top: -5px;
+      }
+      .body{
+        width: 100%;
+        padding: 0;
+        p{
+          text-align: center;
+        }
+        &:after {
+          top: -87PX;
+        }
+      }
+    }
+    
   }
 }

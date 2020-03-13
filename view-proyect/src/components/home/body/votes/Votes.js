@@ -3,10 +3,8 @@ import "./votes.scss";
 import data from "../../../data";
 
 export default function Votes() {
-  const [algo, setalgo] = useState(true);
+  const [bandera, setBandera] = useState(true);
   const [error, setError] = useState(false);
-  const likes = document.getElementsByClassName('buttonLike');
-  const dislikes = document.getElementsByClassName('buttonDislike');
 
   useEffect(() => {
     for (let i = 0; i < data.data.length; i++) {
@@ -23,17 +21,11 @@ export default function Votes() {
     setError(false);
   },[]);
   
-  const eraserDislike = () => {
-    for (let i = 0; i < dislikes.length; i++) {
-      const element = dislikes[i];
-      element.className ='buttonDislike'
-    }
+  const eraserDislike = element => {
+    element.className ='buttonDislike';
   }
-  const eraserLike = () => {
-    for (let i = 0; i < likes.length; i++) {
-      const element = likes[i];
-      element.className ='buttonLike'
-    }
+  const eraserLike = element => {
+    element.className ='buttonLike'
   }
 
   for (let i = 0; i < data.data.length; i++) {
@@ -45,30 +37,28 @@ export default function Votes() {
   
   const handlerActive = (e,i,element) => {
     e.preventDefault();
-    eraserDislike();
-    eraserLike();
     if (e.target.className == 'fas fa-thumbs-up') {
       if (e.target.parentNode.className == 'buttonLike') {
         e.target.parentNode.className = 'buttonLike buttonLike-active';
         var select = 'buttonLike'
         newValues(e,select, i, element)
-        eraserDislike();
+        eraserDislike(e.target.parentNode.parentNode.children[1]);
       } else if (e.target.parentNode.className == 'buttonDislike') {
         e.target.parentNode.className = 'buttonDislike buttonDislike-active';
         var select = 'buttonDislike'
         newValues(e,select, i, element)
-        eraserLike();
+        eraserLike(e.target.parentNode.parentNode.children[0]);
       }
     } else if (e.target.className == 'buttonLike') {
       e.target.className = 'buttonLike buttonLike-active';
       var select = 'buttonLike'
       newValues(e,select, i, element)
-      eraserDislike();
+      eraserDislike(e.target.parentNode.children[1]);
     } else if (e.target.className == 'buttonDislike'){
       e.target.className = 'buttonDislike buttonDislike-active';
       var select = 'buttonDislike'
       newValues(e,select, i, element)
-      eraserLike();
+      eraserLike(e.target.parentNode.children[0]);
     }    
   }
 
@@ -83,7 +73,7 @@ export default function Votes() {
       element.totalVotes = localStorage.getItem('totalvotes'+i) 
       element.porclike = Math.floor(localStorage.getItem('like'+i)*100)/(localStorage.getItem('totalvotes'+i));
       element.porcdislike = Math.floor(localStorage.getItem('dislike'+i) *100)/(localStorage.getItem('totalvotes'+i));
-      setalgo(!algo);
+      setBandera(!bandera);
 
     } else {
       var suma = parseInt(localStorage.getItem(`dislike${i}`))+1;
@@ -94,38 +84,56 @@ export default function Votes() {
       element.totalVotes = localStorage.getItem('totalvotes'+i) 
       element.porclike = Math.floor(localStorage.getItem('like'+i)*100)/(localStorage.getItem('totalvotes'+i));
       element.porcdislike = Math.floor(localStorage.getItem('dislike'+i) *100)/(localStorage.getItem('totalvotes'+i));
-      setalgo(!algo);
+      setBandera(!bandera);
 
     }
   }
 
-  const handlerSend = () => {
-    eraserLike();
-    eraserDislike();
+  const showVoteAgainButton = element => {
+    const parent = element.parentElement;
+
+    parent.children[0].className = 'show';
+    element.className = 'hide';  
+  };
+
+  const voteAgain = event => {
+    const parent = event.target.parentElement.parentElement.parentElement;
+
+    parent.children[1].className = 'show';
+    parent.children[0].className = 'hide'; 
+  }
+
+  const handlerSend = event => {
+    const buttonsParent = event.target.parentElement.parentElement;
+    const likeButton = buttonsParent.children[0];
+    const dislikeButton = buttonsParent.children[1];
+
+    eraserLike(likeButton);
+    eraserDislike(dislikeButton);
     alert('Thanks for your vote!')
-    setError(!error);
+    showVoteAgainButton(buttonsParent);
   }
 
   var cards = data.data.map((element,i) => 
-    <div className="col-6" key={i+1}>
-      <div className="card-vote">
-        <div className="voteInfo">
+    <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" key={i+1}>
+      <div className="card-vote" style={{
+          backgroundImage: "url("+element.img+")",
+          }}>
+        <div className="voteInfo" >
           <div className="status">
             <h1 className="like">{element.name}</h1>
             <small>1 month ago <span>in {element.type}</span></small>
           </div>
-          <p>
-            Vestibulum diam ante, porttitor a odio aget, rhoncus neque. Aenean eu velit libero.
-          </p>
+            <p>
+              Vestibulum diam ante, porttitor a odio aget, rhoncus neque. Aenean eu velit libero.
+            </p>
           <div className="buttons">
-          {error ? (
-            <div>
-              <div className="buttonVote"  onClick={()=>setError(!error)}>
+            <div className="hide">
+              <div className="buttonVote"  onClick={e => voteAgain(e)}>
                 <p>Vote again</p>
               </div>
             </div>
-                  ) : (
-            <div>
+            <div className="show">
               <div className="buttonLike" onClick={e=>handlerActive(e,i,element)}>
                 <i className="fas fa-thumbs-up"></i>
               </div>
@@ -136,7 +144,6 @@ export default function Votes() {
                 <p>Vote now</p>
               </div>
             </div>
-            )}
             
           </div>
         </div>

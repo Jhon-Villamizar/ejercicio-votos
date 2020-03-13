@@ -5,16 +5,21 @@
 		display: block;
 	}
     .card-vote {
-			background-color: black;
-			height: 500px;
+			height: 500px !important;
 			width: 100%;
 			position: relative;
 			color: $white;
 			margin-bottom: 30px;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
 			.voteInfo {
 				position: absolute;
 				top: 38%;
 				padding: 40px;
+				@media (max-width: 375px) {
+					top: 29%;
+				}
 				.status {
 					.like {
 						position: relative;
@@ -31,6 +36,12 @@
 							background-size: 60%;
 							background-repeat: no-repeat;
 							background-position: center;
+						}
+						@media (max-width: 425px) {
+							font-size: 35px;
+						}
+						@media (max-width: 375px) {
+							font-size: 31px;
 						}
 					}
 					.dislike {
@@ -52,6 +63,12 @@
 					}
 				}
 				.buttons {
+					.hide {
+						display: none;
+					}
+					.show {
+						display: block;
+					}
 					.buttonLike,.buttonDislike,.buttonVote {
 						display: inline-block;
 						height: 30px;

@@ -10,11 +10,11 @@ export default function CardHeader() {
 						<div className="principalcard">
 							<div className="card">
 								<div className="card-body">
-									<small>This is some text within a card body.</small>
-									<h1>Title Lorem?</h1>
-									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ratione dolorum tempora delectus labore praesentium quibusdam maiores, corporis necessitatibus et! Voluptas dolorem placeat reiciendis natus</p>
-									<small><i className="fab fa-wikipedia-w"></i> This is some text within a card body.</small>
-									<p><span>This is some text within a card body.</span></p>
+									<small>What's your opinion on</small>
+									<h1>Pope Francis?</h1>
+									<p>He's talking  tough on clergy sexual abuse, but is he just another papal pervert protector? (thumbs down) or a true pedophile punishing pontiff (thumbs up)</p>
+									<small><i className="fab fa-wikipedia-w"></i> More information</small>
+									<p><span>What's Your Verdict?</span></p>
 								</div>
 							</div>
 							<div className="card-votes">

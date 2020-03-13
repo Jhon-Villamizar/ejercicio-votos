@@ -28,4 +28,17 @@
 	.footerSocial {
 		float: right;
 	}
+	@media (max-width: 425px) {
+		.footerMenu,.footerSocial {
+			float: unset;
+		}
+		.footerMenu,.footerSocial {
+			text-align: center;
+		}
+		.footerSocial {
+			margin: 0 auto;
+			width: 50%;
+			display: block;
+		}
+	}
 }

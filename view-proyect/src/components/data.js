@@ -5,7 +5,7 @@ exports.data = [
 		text: 'Lorem ipsum', 
 		dislike: 4, 
 		type: 'Entertainment',
-		img: ''
+		img: 'https://pixelz.cc/wp-content/uploads/2017/08/kanye-west-uhd-4k-wallpaper.jpg'
 	},
 	{ 
 		name: 'Mark Zuckerberg',
@@ -13,7 +13,7 @@ exports.data = [
 		text: 'Lorem ipsum', 
 		dislike: 64, 
 		type: 'Bussines',
-		img: ''
+		img: 'https://wallsdesk.com/wp-content/uploads/2017/01/Mark-Zuckerberg-Computer-Wallpaper.jpg'
 	},
 	{ 
 		name: 'Cristina Fernández de Kirchner',
@@ -21,7 +21,7 @@ exports.data = [
 		text: 'Lorem ipsum', 
 		dislike: 64, 
 		type: 'Politics',
-		img: ''
+		img: 'https://albertonews.com/wp-content/uploads/2019/10/cristina-fernandez-argentina.jpg'
 	},
 	{ 
 		name: 'Malala Yousafzai',
@@ -29,6 +29,6 @@ exports.data = [
 		text: 'Lorem ipsum', 
 		dislike: 36, 
 		type: 'Entertainment',
-		img: ''
+		img: 'https://wallpapercave.com/wp/wp2101608.jpg'
 	}
 ]

@@ -6,8 +6,8 @@ export default function Footer() {
 		<div className="content-footer">
 			<div className="container">
 				<div className="row">
-					<div className="col-8">
-						<div className="footerMenu text-left">
+					<div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+						<div className="footerMenu">
 							<ul>
 								<a><li>Terms and Conditions</li></a>
 								<a><li>Privaci Policy</li></a>
@@ -15,8 +15,8 @@ export default function Footer() {
 							</ul>
 						</div>
 					</div>
-					<div className="col-4">
-					<div className="footerSocial text-right">
+					<div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<div className="footerSocial">
 							<ul>
 								<li>Follow Us</li>
 								<a><li><i className="fab fa-facebook-square"></i></li></a>

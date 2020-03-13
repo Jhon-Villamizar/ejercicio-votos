@@ -39,5 +39,37 @@
 				font-weight: 700;
 			}
 		}
+		@media (max-width: 1024px) {
+			.title {
+				width: 70%;
+				h2 {
+					position: relative;
+					top: 6px;
+				}
+			}
+			.botton {
+				position: absolute;
+				top: 38px;
+			}
+		}
+		@media (max-width: 768px) {
+			.botton {
+				width: 25%;
+			}
+		}
+		@media (max-width: 425px) {
+			display: block;
+			.title {
+				width: 100%;
+				margin-bottom: 20px;
+				h2 {
+					position: unset;
+				}
+			}
+			.botton {
+				width: 100%;
+				position: unset;
+			}
+		}
   }
 }
